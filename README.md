@@ -15,9 +15,13 @@
 
 ## 학습 진행 경과
 
-- StackedHourglass Network 모델은 Validation Loss가 15 Epoch에서 ***1.5659***까지 낮아졌다. 
+### - 첫번째 시도에서 StackedHourglass Network 모델은 Validation Loss가 15 Epoch에서 1.5659 까지 낮아졌다. 
 
 ![learning_result1](https://user-images.githubusercontent.com/39249809/102385787-9c8c6380-4011-11eb-9ced-b5c29bf09803.png)
+
+### - 두번째 시도에서는 위의 학습 결과를 불러와서 Validation Loss가 2 Epoch에서 1.2269 까지 낮아졌다. 
+
+![learning_result](https://user-images.githubusercontent.com/39249809/102421670-5272a480-4048-11eb-9db2-a2133252677f.png)
 
 
 ## 결과 시각화

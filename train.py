@@ -246,7 +246,7 @@ if __name__ == "__main__":
 
     automatic_gpu_usage()
 
-    pretrained_path = None #'./models/model-v0.0.3-epoch-1-loss-1.0744.h5'
+    pretrained_path = './models/model-v0.0.3-epoch-2-loss-1.2269.h5'
 
     train(epochs, start_epoch, learning_rate, tensorboard_dir, pretrained_path,
           num_heatmap, batch_size, train_tfrecords, val_tfrecords, '0.0.3')

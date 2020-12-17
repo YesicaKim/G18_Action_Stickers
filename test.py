@@ -36,7 +36,7 @@ model = StackedHourglassNetwork(
         input_shape=(256, 256, 3), num_stack=4, num_residual=1,
         num_heatmap=16)
 
-model.load_weights('./models/model-v0.0.1-epoch-15-loss-1.5659.h5')
+model.load_weights('./models/model-v0.0.3-epoch-2-loss-1.2269.h5')
 
 R_ANKLE = 0
 R_KNEE = 1
@@ -135,7 +135,7 @@ def draw_keypoints_on_image(image, keypoints, index=None):
         if index is not None and index != i:
             continue
         plt.scatter(joint_x, joint_y, s=10, c='red', marker='o')
-    plt.savefig('./test6_p.jpg', dpi=300)
+    plt.savefig('./results/test8_p.jpg', dpi=300)
     plt.show()
 
 
@@ -152,10 +152,10 @@ def draw_skeleton_on_image(image, keypoints, index=None):
         joint_1 = joints[bone[0]]
         joint_2 = joints[bone[1]]
         plt.plot([joint_1[0], joint_2[0]], [joint_1[1], joint_2[1]], linewidth=5, alpha=0.7)
-    plt.savefig('./test6_s.jpg', dpi=300)
+    plt.savefig('./results/test8_s.jpg', dpi=300)
     plt.show()
 
 
-image, keypoints = predict('./test6.jpg')
+image, keypoints = predict('./results/test8.jpg')
 draw_keypoints_on_image(image, keypoints)
 draw_skeleton_on_image(image, keypoints)
